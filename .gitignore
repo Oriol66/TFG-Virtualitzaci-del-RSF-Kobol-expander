@@ -1,0 +1,58 @@
+# Ignorar archivos y carpetas generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de build generadas por JUCE y el compilador
+Builds
+build
+
+# Ignorar archivos binarios
+.dll
+.exe
+.so
+.dylib
+.o
+.obj
+.pdb
+
+# Ignorar archivos de configuración de IDEs específicos
+.idea
+.vscode
+.sln
+.vcxproj
+.vcxproj.filters
+.vcxproj.user
+.xcworkspace
+.xcodeproj
+.sublime-workspace
+.sublime-project
+
+# Ignorar dependències locals
+.log
+.tmp
+.temp
+.bak
+
+# Ignorar aarxius locals
+.jucer
+.jucer.backup
+Projucer.config
+.JuceLibraryCodemodules
+
+# Ignorar biblioteques i dependències locals grans
+Libraries
+ThirdParty
+
+# Ignorar arxius del SO
+.DS_Store
+.swp
+.swo
+.swn
+
+# Ignorar arxius icarpetes temporals
+temp
+tmp
+
+# Ignorar arxiusd e compilació
+bin
+obj
