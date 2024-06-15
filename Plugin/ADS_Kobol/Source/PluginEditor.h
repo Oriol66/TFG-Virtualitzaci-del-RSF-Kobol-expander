@@ -1,7 +1,6 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "Visualizer.h"
 #include "PluginProcessor.h"
 
 class ADS_KobolAudioProcessorEditor : public juce::AudioProcessorEditor, 
@@ -16,7 +15,6 @@ public:
     void resized() override;
     void buttonClicked(juce::Button* button) override;
     std::unique_ptr<juce::FileChooser> fileChooser;
-    Visualizer* getVisualizer() { return &visualizer; }; // Visualizer
 
 
 
@@ -47,9 +45,7 @@ private:
     const float minVoltage = 0.0f;
     const float maxVoltage = 10.0f;
 
-    // Visualizer
-    Visualizer visualizer;
 
-
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ADS_KobolAudioProcessorEditor)
 };

@@ -9,11 +9,10 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include <JuceHeader.h>
-#include "Visualizer.h"
 
 //==============================================================================
 ADS_KobolAudioProcessorEditor::ADS_KobolAudioProcessorEditor (ADS_KobolAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p), visualizer()
+    : AudioProcessorEditor (&p), audioProcessor (p)
 {
     previousDirectory = juce::File::getSpecialLocation(juce::File::userHomeDirectory);
 
@@ -84,11 +83,8 @@ ADS_KobolAudioProcessorEditor::ADS_KobolAudioProcessorEditor (ADS_KobolAudioProc
     recordButton.addListener(this);
     addAndMakeVisible(&recordButton);
 
-    //Visualizer
-    addAndMakeVisible(visualizer);
-
     
-    setSize(800, 500);
+    setSize(700, 300);
 }
 
 ADS_KobolAudioProcessorEditor::~ADS_KobolAudioProcessorEditor()
@@ -136,13 +132,9 @@ void ADS_KobolAudioProcessorEditor::resized()
     recordButton.setBounds(45 + buttonWidth*2, buttonY, buttonWidth, buttonHeight);
 
     // Loaded file
-    filenameLabel.setBounds(20, 400, getWidth() - 40, 20);
+    filenameLabel.setBounds(20, buttonY - buttonHeight - 20, getWidth() - 40, 20);
 
-    // Visualizer
-    int visualizerHeight = 200;
-    int visualizerY = 160;
-    visualizer.setBounds(20, visualizerY, getWidth() - 40, visualizerHeight);
-    
+       
 }
 
 //================================================================================================

@@ -222,18 +222,7 @@ void ADS_KobolAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juc
         }
     }
 
-    /* Update envelope component
-    juce::MessageManager::callAsync([this]()
-        {
-            if (auto* editor = dynamic_cast<ADS_KobolAudioProcessorEditor*>(getActiveEditor()))
-            {
-                if (editor->getVisualizer() != nullptr) {
-                    editor->getVisualizer()->setEnvelope(envelopeBuffer);
-                }
-            }
-            envelopeBuffer.clear();
-        });
-    */
+    
     //Recording
     if (recording && threadedWriter != nullptr)
     {
@@ -406,14 +395,6 @@ void ADS_KobolAudioProcessor::stopRecording()
     }
 }
 
-Visualizer* ADS_KobolAudioProcessor::getVisualizer() const
-{
-    if (auto* editor = dynamic_cast<ADS_KobolAudioProcessorEditor*>(getActiveEditor()))
-    {
-        return editor->getVisualizer();
-    }
-    return nullptr;
-}
 
 void ADS_KobolAudioProcessor::setAdsrParams(const juce::ADSR::Parameters& params) {
     adsrParams = params;
