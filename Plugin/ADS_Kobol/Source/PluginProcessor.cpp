@@ -69,9 +69,9 @@ float ADS_KobolAudioProcessor::decayCurve(float v)
 
 float ADS_KobolAudioProcessor::sustainCurve(float v)
 {
-    float x0 = -0.239039f;
-    float x1 = 0.123904f;
-    float y = x0 + x1 * v;
+    float a0 = -0.239039f;
+    float a1 = 0.123904f;
+    float y = a0 + a1 * v;
     
     if (y < 0) {
         y = 0;
