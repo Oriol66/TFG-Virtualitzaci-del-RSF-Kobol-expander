@@ -1,4 +1,4 @@
-# TFG Virtualització del RSF Kobol Expander: envelope ADS
+# TFG Virtualització del RSF Kobol Expander: emulació de l'envolvent ADS
 
 # Mostres i codis
 
@@ -13,15 +13,13 @@ A part, hi ha el codi en C++ del plugin creat en JUCE en la carpeta Plugin/ADS_K
 El repositori està organitzat de la siguent manera:
 
 /
-├── MUESTRAS/
+├── Analisis amb Python/
 
 │   ├── ENREGISTRAMENTS/
 
 │   ├── ENREGISTRAMENTS ADS1 vs ADS2/
 
 │   └── ENREGISTRAMENTS KOBOL vs plugin/
-
-├── codigos/
 
 │   ├── ADS1_vs_ADS2,_ADS1_vs_Sound.ipynb.ipynb
 
@@ -39,5 +37,6 @@ Per treballar amb les ostres simpleent clona el repositori i cambia el path d'on
 
 # Utilitzar el Plugin. 
 Per utilitzar el Plugin cal tenir instalat el JUCE i el llenguatge C++ 17. 
+Tot el codi necessari per compilar el Plugin es troba a la carpeta Plugin/ADS_Kobol.
 També cal instalar els mòduls necessaris de JUCE.
 Per fer-lo serv s'ha de compilar en un IDE amb C++.
